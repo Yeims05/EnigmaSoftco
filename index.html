@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EnigmaSoft</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="LOGO.png"> <!-- Usa .ico si es el formato -->
+
+
+</head>
+<body>
+    <header class="header">
+        <script>
+            // Función para añadir o quitar la clase según el scroll
+            function handleScroll() {
+                const header = document.querySelector('.header');
+                if (window.scrollY > 50) {
+                    header.classList.add('scroll-active');
+                } else {
+                    header.classList.remove('scroll-active');
+                }
+            }
+        
+            // Añadir el listener al evento scroll
+            window.addEventListener('scroll', handleScroll);
+        </script>        
+        <script>
+            let lastScrollTop = 0;
+            const navbar = document.querySelector('header');
+        
+            window.addEventListener('scroll', function() {
+                let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+                if (scrollTop > lastScrollTop) {
+                    navbar.style.top = '-100px'; // Desliza hacia arriba
+                } else {
+                    navbar.style.top = '0'; // Desliza hacia abajo
+                }
+                lastScrollTop = scrollTop;
+            });
+        </script>
+        <a href="#" class="logo">EnigmaSoft</a>
+        <nav class="navbar">
+            <a href="#home" style="--i:1;" class="active">Inicio</a>
+            <a href="#about" style="--i:2;">Acerca de nosotros</a>
+            <a href="#feat" style="--i:4;">Feat</a>    
+            <a href="#contact" style="--i:5;">Contactar</a>
+        </nav>
+        <div class="social-media">
+            <a href="mailto:enigmasoftcol@gmail.com" style="--i:1;"><i class='bx bxl-gmail'></i></box-icon></a>
+            <a href="https://web.facebook.com/profile.php?viewas=100000686899395&id=61563489575922" style="--i:2;"><i class='bx bxl-facebook'></i></box-icon></a>
+            <a href="https://www.instagram.com/enigmasoft_col" style="--i:3;"><i class='bx bxl-instagram-alt' ></i></a>
+            <a href="https://wa.link/fo4tv4" style="--i:4;"><i class='bx bxl-whatsapp' ></i></a>
+        </div>
+    </header>
+
+    <!-- Sección de Inicio -->
+    <section class="home" id="home">
+        <div class="home-content">
+            <h1> EnigmaSoft Experience.</h1>
+            <h3>Redefined</h3>
+            <p>Estamos en proceso de construir un espacio donde la innovación y la tecnología se encuentran para crear experiencias web excepcionales. En EnigmaSoft, nuestro enfoque está en ofrecer soluciones de desarrollo web y diseño digital que se adapten a tus necesidades y superen tus expectativas.</p>
+            <a href="#about" class="btn">Explore.</a>
+        </div>
+        <div class="home-img"> 
+            <div class="rhombus">
+                <img src="LOGO.png" alt="EnigmaSoft Logo">
+            </div>
+        </div>
+        <div class="rhombus2"></div>
+    </section>
+    <!-- Sección Acerca de Nosotros -->
+    <section class="about" id="about">
+        <h2>Acerca de Nosotros</h2>
+        <p>EnigmaSoft es una empresa emergente dedicada a transformar tus ideas en realidades digitales. Con un enfoque en el desarrollo web y el diseño innovador, nuestro objetivo es ofrecer soluciones tecnológicas de alta calidad que te ayuden a destacar en el mundo digital. <br>
+
+            <br>¿Quiénes somos?<br>
+            Somos un equipo de apasionados del diseño y la tecnología, comprometidos en crear experiencias web únicas y personalizadas. Con una combinación de creatividad y precisión técnica, trabajamos estrechamente contigo para entender tus necesidades y entregar resultados que superen tus expectativas.
+            </p>
+        <p>Nuestra Misión <br>
+            Innovar en el desarrollo web y el diseño digital, ofreciendo soluciones que no solo cumplen, sino que superan las expectativas de nuestros clientes..</p>
+    </section>
+
+
+    <!-- Sección Feat -->
+    <section class="feat" id="feat">
+        <h2>Características destacadas</h2>
+        <div class="feat-item">
+            <i class='bx bxs-cog'></i>
+            <h3>Innovación</h3>
+            <p>Implementamos las últimas tecnologías para ofrecer soluciones innovadoras.</p>
+        </div>
+        <div class="feat-item">
+            <i class='bx bxs-rocket'></i>
+            <h3>Velocidad</h3>
+            <p>Nuestros productos están optimizados para un rendimiento superior.</p>
+        </div>
+        <div class="feat-item">
+            <i class='bx bxs-shield'></i>
+            <h3>Seguridad</h3>
+            <p>Nos aseguramos de que cada proyecto sea seguro y confiable.</p>
+        </div>
+    </section>
+
+    <!-- Sección de Contacto -->
+    <section class="contact" id="contact">
+        <h2>Contáctanos</h2>
+        <form action="#">
+            <input type="text" placeholder="Nombre" required>
+            <input type="email" placeholder="Correo Electrónico" required>
+            <textarea placeholder="Mensaje" required></textarea>
+            <button type="submit" class="btn">Enviar</button>
+        </form>
+    </section>
+</body>
+</html>
